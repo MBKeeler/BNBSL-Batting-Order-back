@@ -2,6 +2,6 @@
 
 class User < ApplicationRecord
   include Authentication
-  has_many :players
+  has_many :players, :seasons
   validates :accnt_type, presence: true
 end
