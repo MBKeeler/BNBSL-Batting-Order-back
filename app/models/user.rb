@@ -3,5 +3,5 @@
 class User < ApplicationRecord
   include Authentication
   has_many :players
-  validates :accnt_type, presence: true, 
+  validates :accnt_type, presence: true
 end
