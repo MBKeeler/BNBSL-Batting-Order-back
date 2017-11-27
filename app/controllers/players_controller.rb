@@ -1,4 +1,4 @@
-class PlayersController < ApplicationController
+class PlayersController < ProtectedController
   before_action :set_player, only: [:show, :update, :destroy]
 
   # GET /players
@@ -39,13 +39,25 @@ class PlayersController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_player
-      @player = Player.find(params[:id])
-    end
+      # Use callbacks to share common setup or constraints between actions.
+      def set_player
+        # @player = Player.find(params[:id])
+        @player = current_user.players.find(params[:id])
+      end
 
-    # Only allow a trusted parameter "white list" through.
-    def player_params
-      params.fetch(:player, {})
-    end
-end
+      # Only allow a trusted parameter "white list" through.
+      def player_params
+        params.require(:player).permit(:first_name, :last_name, :season, :team, :program, :notes, :batting_avg)
+      end
+
+#   private
+#     # Use callbacks to share common setup or constraints between actions.
+#     def set_player
+#       @player = Player.find(params[:id])
+#     end
+#
+#     # Only allow a trusted parameter "white list" through.
+#     def player_params
+#       params.fetch(:player, {})
+#     end
+# end
