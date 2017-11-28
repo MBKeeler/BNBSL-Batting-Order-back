@@ -1,5 +1,7 @@
-  # class SeasonsController < ProtectedController
-  class SeasonsController < ApplicationController
+# frozen_string_literal: true
+
+class SeasonsController < ProtectedController
+# class SeasonsController < ApplicationController
   before_action :set_season, only: [:show, :update, :destroy]
 
   # GET /players
@@ -8,7 +10,7 @@
     render json: @seasons
   end
 
-  # GET /players/1
+  # GET /seasons/1
   def show
     render json: Season.find(params[:year, :program])
   end
@@ -44,17 +46,17 @@
   end
 
   private
+
       # Use callbacks to share common setup or constraints between actions.
       def set_season
         # @season = Season.find(params[:id])
         @season = current_user.seasons.find(params[:id])
       end
-
       # Only allow a trusted parameter "white list" through.
       def season_params
         params.require(:season).permit(:year, :team, :program)
       end
-  end
+end
 #   private
 #     # Use callbacks to share common setup or constraints between actions.
 #     def set_season
