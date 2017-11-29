@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20171127184501) do
-=======
-ActiveRecord::Schema.define(version: 20171127221800) do
->>>>>>> curl-script
+ActiveRecord::Schema.define(version: 20171129222307) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,7 +33,6 @@ ActiveRecord::Schema.define(version: 20171127221800) do
     t.integer "batting_avg"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "season"
     t.bigint "user_id"
     t.string "batting_position"
     t.index ["user_id"], name: "index_players_on_user_id"
