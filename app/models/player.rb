@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class Player < ApplicationRecord
+  belongs_to :user
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :team, presence: true, length: { maximum: 30 }

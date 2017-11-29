@@ -1,5 +1,5 @@
 
-  curl --include --request GET "http://localhost:4741/players${ID}" \
+  curl --include --request GET "http://localhost:4741/players/${FIRST_NAME}" \
   --header "Content-Type: application/json" \
   --header "Authorization: Token token=${TOKEN}" \
   --data '{

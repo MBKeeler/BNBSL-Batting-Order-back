@@ -2,7 +2,7 @@
 
 class SeasonsController < ProtectedController
 # class SeasonsController < ApplicationController
-  before_action :set_season, only: [:show, :update, :destroy]
+  before_action :set_season, only: [:update, :destroy]
 
   # GET /players
   def index
@@ -12,7 +12,7 @@ class SeasonsController < ProtectedController
 
   # GET /seasons/1
   def show
-    render json: Season.find(params[:year, :program])
+    render json: Season.find_by(year: params[:season][:year], program: params[:season][:program])
   end
 
   # POST /players

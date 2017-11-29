@@ -2,7 +2,7 @@
 
 class PlayersController < ProtectedController
 # class PlayersController < ApplicationController
-  before_action :set_player, only: [:show, :update, :destroy]
+  before_action :set_player, only: [:update, :destroy]
 
   # GET /players
   def index
@@ -12,7 +12,8 @@ class PlayersController < ProtectedController
 
   # GET /players/1
   def show
-    render json: Player.find(params[:first_name, :last_name])
+    # binding.pry
+    render json: Player.find_by(first_name: params[:player][:first_name], last_name: params[:player][:last_name])
   end
 
   # POST /players
