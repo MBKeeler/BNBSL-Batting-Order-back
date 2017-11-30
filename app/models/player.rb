@@ -2,8 +2,8 @@
 
 class Player < ApplicationRecord
   belongs_to :user
-  has_many :players_seasons
-  has_many :seasons, through: :players_seasons
+  has_many :player_seasons
+  has_many :seasons, through: :player_seasons
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :team, presence: true, length: { maximum: 30 }

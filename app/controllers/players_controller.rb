@@ -55,7 +55,7 @@ class PlayersController < ProtectedController
       end
       # Only allow a trusted parameter "white list" through.
       def player_params
-        params.require(:player).permit(:first_name, :last_name, :season, :position, :team, :program, :notes, :batting_avg, :batting_position)
+        params.require(:player).permit(:first_name, :last_name, :position, :team, :program, :notes, :batting_avg, :batting_position)
       end
 end
 #   private
