@@ -40,3 +40,6 @@ TOKEN="BAhJIiUxZTRiNjg5NWJiYmI2ODA1YmI3YzVlZDU5MTJjYjAwYgY6BkVG--501964881806b10
 
 # Destroy Season
 TOKEN="BAhJIiUzMDExNTJkZWNjNGI5MzFiNzczYzc4YmExOGU2MDU4MwY6BkVG--0fcf1795b6b8e5c91c95f96801bc0d54d4f612d9" ID=1 sh scripts/season/destroy.sh
+
+# create new player_seasons
+TOKEN="BAhJIiVhY2QwN2IwM2ViNDM2NjhhZGZmZDE1YTQwNDQzMWI5NQY6BkVG--d668569bc0bb30af87e1717cbc61407cd4d83fab" PLAYERID="1" SEASONID="1" sh scripts/player_season/create.sh

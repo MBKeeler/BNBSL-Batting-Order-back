@@ -1,4 +1,5 @@
 class PlayerSeasonsController < ApplicationController
+# class PlayerSeasonsController < ProtectedController
   before_action :set_player_season, only: [:show, :update, :destroy]
 
   # GET /player_seasons
@@ -16,7 +17,7 @@ class PlayerSeasonsController < ApplicationController
   # POST /player_seasons
   def create
     @player_season = PlayerSeason.new(player_season_params)
-
+    # @player_season = current_user.player_seasons.build(player_season_params)
     if @player_season.save
       render json: @player_season, status: :created
     else
@@ -42,6 +43,7 @@ class PlayerSeasonsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_player_season
       @player_season = PlayerSeason.find(params[:id])
+      # @player_season = current_user.player_seasons.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
