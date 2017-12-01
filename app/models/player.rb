@@ -15,6 +15,6 @@ class Player < ApplicationRecord
   # use it in the application to determine position 4 (clean up) in the
   # batting order
   validates :batting_avg, length: { maximum: 3 }, numericality: { only_integer: true}
-  validates :season, presence: true
+  # validates :season, presence: true
   validates :batting_position, presence: true
 end

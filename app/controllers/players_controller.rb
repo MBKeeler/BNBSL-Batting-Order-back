@@ -13,7 +13,8 @@ class PlayersController < ProtectedController
   # GET /players/1
   def show
     # binding.pry
-    render json: Player.find_by(first_name: params[:player][:first_name], last_name: params[:player][:last_name])
+    render json: Player.find_by(team: params[:player][:team])
+    # render json: Player.find_by(team: params[:player][:team], year: params[:season][:year])
   end
 
   # POST /players
@@ -55,7 +56,8 @@ class PlayersController < ProtectedController
       end
       # Only allow a trusted parameter "white list" through.
       def player_params
-        params.require(:player).permit(:first_name, :last_name, :position, :team, :program, :notes, :batting_avg, :batting_position)
+        # params.require(:player).permit(:first_name, :last_name, :position, :team, :program, :notes, :batting_avg, :batting_position)
+          params.require(:player).permit(:first_name, :last_name, :position, :team, :program, :notes, :batting_avg, :batting_position).require(:season).permit(:year)
       end
 end
 #   private
