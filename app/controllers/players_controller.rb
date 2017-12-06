@@ -48,7 +48,6 @@ class PlayersController < ProtectedController
   end
 
   private
-
       # Use callbacks to share common setup or constraints between actions.
       def set_player
         # @player = Player.find(params[:id])
@@ -57,17 +56,6 @@ class PlayersController < ProtectedController
       # Only allow a trusted parameter "white list" through.
       def player_params
         # params.require(:player).permit(:first_name, :last_name, :position, :team, :program, :notes, :batting_avg, :batting_position)
-          params.require(:player).permit(:first_name, :last_name, :position, :team, :program, :notes, :batting_avg, :batting_position).require(:season).permit(:year)
+          params.require(:player).permit(:first_name, :last_name, :position, :team, :program, :notes, :batting_avg, :batting_position)
       end
 end
-#   private
-#     # Use callbacks to share common setup or constraints between actions.
-#     def set_player
-#       @player = Player.find(params[:id])
-#     end
-#
-#     # Only allow a trusted parameter "white list" through.
-#     def player_params
-#       params.fetch(:player, {})
-#     end
-# end
