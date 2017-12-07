@@ -5,12 +5,16 @@ class PlayerSeasonsController < ApplicationController
   # GET /player_seasons
   def index
     @player_seasons = PlayerSeason.all
-
+    binding.pry
     render json: @player_seasons
+
   end
 
   # GET /player_seasons/1
   def show
+    @player_season.player = Player.find(@player_season.player_id)
+    @player_season.season = Season.find(@player_season.season_id)
+
     render json: @player_season
   end
 

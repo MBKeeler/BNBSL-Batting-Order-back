@@ -46,3 +46,6 @@ TOKEN="BAhJIiVhY2QwN2IwM2ViNDM2NjhhZGZmZDE1YTQwNDQzMWI5NQY6BkVG--d668569bc0bb30a
 
 # Get all player seasons
 TOKEN="BAhJIiU1MGNiNGNlNmEyYjgwNTM3M2ViNDlkNGNmNjA4ZDZiYwY6BkVG--05bb8f53589409cabcc66ba96621cb76efae25a3" sh scripts/player_season/index.sh
+
+# Get a player_season
+TOKEN="BAhJIiU1MGNiNGNlNmEyYjgwNTM3M2ViNDlkNGNmNjA4ZDZiYwY6BkVG--05bb8f53589409cabcc66ba96621cb76efae25a3" ID=1 sh scripts/player_season/index.sh
