@@ -43,3 +43,6 @@ TOKEN="BAhJIiUzMDExNTJkZWNjNGI5MzFiNzczYzc4YmExOGU2MDU4MwY6BkVG--0fcf1795b6b8e5c
 
 # create new player_seasons
 TOKEN="BAhJIiVhY2QwN2IwM2ViNDM2NjhhZGZmZDE1YTQwNDQzMWI5NQY6BkVG--d668569bc0bb30af87e1717cbc61407cd4d83fab" PLAYERID="1" SEASONID="1" sh scripts/player_season/create.sh
+
+# Get all player seasons
+TOKEN="BAhJIiU1MGNiNGNlNmEyYjgwNTM3M2ViNDlkNGNmNjA4ZDZiYwY6BkVG--05bb8f53589409cabcc66ba96621cb76efae25a3" sh scripts/player_season/index.sh
