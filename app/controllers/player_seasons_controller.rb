@@ -12,9 +12,9 @@ class PlayerSeasonsController < ApplicationController
 
   # GET /player_seasons/1
   def show
-    @player_season.player = Player.find(@player_season)
-    @player_season.season = Season.find(@player_season.season_id)
-binding.pry
+    # @player_season.player = Player.find(@player_season)
+    # @player_season.season = Season.find(@player_season.season_id)
+# binding.pry
     render json: @player_season
   end
 

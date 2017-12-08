@@ -1,13 +1,14 @@
 # Sign-up as coach
-EMAIL="mark123" PASSWORD="day" PASSWORD="day" ACCOUNT_TYPE="coach" sh scripts/auth/sign-up.sh
+EMAIL="keeler123" PASSWORD="day" PASSWORD="day" ACCOUNT_TYPE="coach" sh scripts/auth/sign-up.sh
 
 # Sign-up as admin
-EMAIL="mark" PASSWORD="day" PASSWORD="day" ACCOUNT_TYPE="admin" sh scripts/auth/sign-up.sh
+EMAIL="keeler456" PASSWORD="day" PASSWORD="day" ACCOUNT_TYPE="admin" sh scripts/auth/sign-up.sh
 
 # Sign-in
-EMAIL="mark123" PASSWORD="day" PASSWORD="day" sh scripts/auth/sign-in.sh
+EMAIL="keeler456" PASSWORD="day" PASSWORD="day" sh scripts/auth/sign-in.sh
 
-
+# Change-PW
+TOKEN="BAhJIiUxN2Y3MGJiYjAwYjdiODU4NDg5MzFmM2QyZTNmOTcxNwY6BkVG--0f07832d25fef8b7e6210619dab2aa474e3e10b6" ID="5" OLDPW="day" NEWPW="night" sh scripts/auth/change-password.sh
 
 # New Player
 TOKEN="BAhJIiVmMjBiZGRlOGJlYmVhNDQwMWYyZjgzOTVjOTY2NTFiMgY6BkVG--52604f8d040e882996fe564963c2e5452b8e0a1a" FIRST_NAME="Nathan" LAST_NAME="Glidden" TEAM="Astros" SEASON="2018"  POSITION="2nd" NOTES="notes" PROGRAM="AAA" BTTNGAVG="300" BTTINGPOS="2" sh scripts/player/new-player.sh
@@ -27,13 +28,16 @@ TOKEN=BAhJIiUxZTRiNjg5NWJiYmI2ODA1YmI3YzVlZDU5MTJjYjAwYgY6BkVG--501964881806b10c
 TOKEN="BAhJIiUzMDExNTJkZWNjNGI5MzFiNzczYzc4YmExOGU2MDU4MwY6BkVG--0fcf1795b6b8e5c91c95f96801bc0d54d4f612d9" ID=2 sh scripts/player/destroy.sh
 
 # View all Seasons
-TOKEN="BAhJIiVmYjIyYzAzYWM4MDlhNWIxMmI4MjlkMTZmN2MxZDc5ZQY6BkVG--9c69eed661b3402b0e27f5cf9e4acdfb9f9e7274" sh scripts/season/index.sh
+TOKEN="BAhJIiVjZThlZDk0ZmE2NTEwZDFlNGRlMTRkMTgxYjZlYzUxOQY6BkVG--0d0ca4d9c53364c8d69cd5a62c5917efbe576077" sh scripts/season/index.sh
 
 # New Season
 TOKEN="BAhJIiUxZTRiNjg5NWJiYmI2ODA1YmI3YzVlZDU5MTJjYjAwYgY6BkVG--501964881806b10c92c61010b556e07f5ec0da60" YEAR="2018" TEAM="Astros" PROGRAM="AAA" sh scripts/season/new-season.sh
 
+# FindorCreate
+TOKEN="BAhJIiU2NmJhZDM2OWRjOTcxMTRkNzk3OWVkZDZmYzAwOWFiZAY6BkVG--45584d68b2b7467bd88d07f4ec503e00ba2cc19d" YEAR="2023" TEAM="Astros" PROGRAM="AAA" sh scripts/season/createorfind.sh
+
 # View one Season
-TOKEN="BAhJIiVmYjIyYzAzYWM4MDlhNWIxMmI4MjlkMTZmN2MxZDc5ZQY6BkVG--9c69eed661b3402b0e27f5cf9e4acdfb9f9e7274" YEAR="2018" POGRAM="AAA" sh scripts/season/show.sh
+TOKEN="BAhJIiU2NmJhZDM2OWRjOTcxMTRkNzk3OWVkZDZmYzAwOWFiZAY6BkVG--45584d68b2b7467bd88d07f4ec503e00ba2cc19d" YEAR="2018" POGRAM="AAA" sh scripts/season/show.sh
 
 # Update a season
 TOKEN="BAhJIiUxZTRiNjg5NWJiYmI2ODA1YmI3YzVlZDU5MTJjYjAwYgY6BkVG--501964881806b10c92c61010b556e07f5ec0da60" ID=2 YEAR="2018" PROGRAM="Majors" sh scripts/season/update.sh

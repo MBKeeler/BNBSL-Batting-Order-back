@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :seasons, only: %i[index show create update destroy]
   resources :player_seasons, only: %i[index show create update destroy]
   resources :examples, except: %i[new edit]
+  post '/season_record/' => 'seasons#findorcreate'
   post '/sign-up' => 'users#signup'
   post '/sign-in' => 'users#signin'
   delete '/sign-out/:id' => 'users#signout'
