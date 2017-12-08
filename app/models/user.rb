@@ -6,5 +6,5 @@ class User < ApplicationRecord
   has_many :players
   has_many :seasons
   has_many :player_seasons
-  validates :accnt_type, presence: true
+  # validates :accnt_type, presence: true
 end
