@@ -5,16 +5,16 @@ class PlayerSeasonsController < ApplicationController
   # GET /player_seasons
   def index
     @player_seasons = PlayerSeason.all
-    binding.pry
+    # binding.pry
     render json: @player_seasons
 
   end
 
   # GET /player_seasons/1
   def show
-    @player_season.player = Player.find(@player_season.player_id)
+    @player_season.player = Player.find(@player_season)
     @player_season.season = Season.find(@player_season.season_id)
-
+binding.pry
     render json: @player_season
   end
 
@@ -22,6 +22,7 @@ class PlayerSeasonsController < ApplicationController
   def create
     @player_season = PlayerSeason.new(player_season_params)
     # @player_season = current_user.player_seasons.build(player_season_params)
+
     if @player_season.save
       render json: @player_season, status: :created
     else

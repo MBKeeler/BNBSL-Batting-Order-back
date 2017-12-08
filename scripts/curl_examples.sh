@@ -10,7 +10,7 @@ EMAIL="mark123" PASSWORD="day" PASSWORD="day" sh scripts/auth/sign-in.sh
 
 
 # New Player
-TOKEN="BAhJIiUxZTRiNjg5NWJiYmI2ODA1YmI3YzVlZDU5MTJjYjAwYgY6BkVG--501964881806b10c92c61010b556e07f5ec0da60" FIRST_NAME="Gino" LAST_NAME="Spinelli" TEAM="Astros" SEASON="2018"  POSITION="Short" NOTES="notes" PROGRAM="AAA" BTTNGAVG="275" BTTINGPOS="5" sh scripts/player/new-player.sh
+TOKEN="BAhJIiVmMjBiZGRlOGJlYmVhNDQwMWYyZjgzOTVjOTY2NTFiMgY6BkVG--52604f8d040e882996fe564963c2e5452b8e0a1a" FIRST_NAME="Nathan" LAST_NAME="Glidden" TEAM="Astros" SEASON="2018"  POSITION="2nd" NOTES="notes" PROGRAM="AAA" BTTNGAVG="300" BTTINGPOS="2" sh scripts/player/new-player.sh
 
 # Edit Player
 TOKEN="BAhJIiUxZTRiNjg5NWJiYmI2ODA1YmI3YzVlZDU5MTJjYjAwYgY6BkVG--501964881806b10c92c61010b556e07f5ec0da60" ID=3 FIRST_NAME="Gino" LAST_NAME="Spinelli" TEAM="Astros" SEASON="2018"  POSITION="Short" NOTES="notes" PROGRAM="AAA" BTTNGAVG="295" BTTINGPOS="4" sh scripts/player/update.sh
@@ -41,11 +41,14 @@ TOKEN="BAhJIiUxZTRiNjg5NWJiYmI2ODA1YmI3YzVlZDU5MTJjYjAwYgY6BkVG--501964881806b10
 # Destroy Season
 TOKEN="BAhJIiUzMDExNTJkZWNjNGI5MzFiNzczYzc4YmExOGU2MDU4MwY6BkVG--0fcf1795b6b8e5c91c95f96801bc0d54d4f612d9" ID=1 sh scripts/season/destroy.sh
 
-# create new player_seasons
-TOKEN="BAhJIiVhY2QwN2IwM2ViNDM2NjhhZGZmZDE1YTQwNDQzMWI5NQY6BkVG--d668569bc0bb30af87e1717cbc61407cd4d83fab" PLAYERID="1" SEASONID="1" sh scripts/player_season/create.sh
+# create new player_season
+TOKEN="BAhJIiViZjY0MmNlMTM0NmNiYWZhODI3NTA3MGI5Mjc4MzRjMQY6BkVG--f107269e4a891ed8dc46815eb2a030c494309a5b" PLAYERID="7" SEASONID="1" sh scripts/player_season/create.sh
 
 # Get all player seasons
 TOKEN="BAhJIiU1MGNiNGNlNmEyYjgwNTM3M2ViNDlkNGNmNjA4ZDZiYwY6BkVG--05bb8f53589409cabcc66ba96621cb76efae25a3" sh scripts/player_season/index.sh
 
 # Get a player_season
-TOKEN="BAhJIiU1MGNiNGNlNmEyYjgwNTM3M2ViNDlkNGNmNjA4ZDZiYwY6BkVG--05bb8f53589409cabcc66ba96621cb76efae25a3" ID=1 sh scripts/player_season/index.sh
+TOKEN="BAhJIiVmMjBiZGRlOGJlYmVhNDQwMWYyZjgzOTVjOTY2NTFiMgY6BkVG--52604f8d040e882996fe564963c2e5452b8e0a1a" SEASONID=1 sh scripts/player_season/show.sh
+
+# Update a player_season with a player
+TOKEN="BAhJIiU1MGNiNGNlNmEyYjgwNTM3M2ViNDlkNGNmNjA4ZDZiYwY6BkVG--05bb8f53589409cabcc66ba96621cb76efae25a3" PLAYERID="7" sh scripts/player_season/update.sh
