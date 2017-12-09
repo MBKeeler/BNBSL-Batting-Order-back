@@ -6,8 +6,6 @@ class Player < ApplicationRecord
   has_many :seasons, through: :player_seasons
   validates :first_name, presence: true
   validates :last_name, presence: true
-  validates :team, presence: true, length: { maximum: 30 }
-  validates :program, length: { maximum: 30 }
   # notes is not a required field
   validates :notes, length: { maximum: 250 }
   validates :position, presence: true
