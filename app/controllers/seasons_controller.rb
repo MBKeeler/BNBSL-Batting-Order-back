@@ -12,11 +12,8 @@ class SeasonsController < ProtectedController
 
   # GET /seasons/1
   def show
-    @season = current_user.seasons.find_by(year: season_params[:year], program: season_params[:program])
-
-    # render json: Season.find_by(year: params[:season][:year], program: params[:season][:program])
-    # render json: Season.find_by(params[:year])
-
+    # @season = current_user.seasons.find_by(year: season_params[:year], program: season_params[:program])
+    @season = current_user.players.find_by(params[:id])
     render json: @season
   end
 

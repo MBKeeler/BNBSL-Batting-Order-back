@@ -1,8 +1,8 @@
 # Sign-up as coach
-EMAIL="keeler123" PASSWORD="day" PASSWORD="day" ACCOUNT_TYPE="coach" sh scripts/auth/sign-up.sh
+EMAIL="keeler123" PASSWORD="day" PASSWORD="day" sh scripts/auth/sign-up.sh
 
 # Sign-up as admin
-EMAIL="keeler456" PASSWORD="day" PASSWORD="day" ACCOUNT_TYPE="admin" sh scripts/auth/sign-up.sh
+EMAIL="mark123" PASSWORD="day" PASSWORD="day" sh scripts/auth/sign-up.sh
 
 # Sign-in
 EMAIL="keeler456" PASSWORD="day" PASSWORD="day" sh scripts/auth/sign-in.sh
@@ -37,7 +37,7 @@ TOKEN="BAhJIiUxZTRiNjg5NWJiYmI2ODA1YmI3YzVlZDU5MTJjYjAwYgY6BkVG--501964881806b10
 TOKEN="BAhJIiU2NmJhZDM2OWRjOTcxMTRkNzk3OWVkZDZmYzAwOWFiZAY6BkVG--45584d68b2b7467bd88d07f4ec503e00ba2cc19d" YEAR="2023" TEAM="Astros" PROGRAM="AAA" sh scripts/season/createorfind.sh
 
 # View one Season
-TOKEN="BAhJIiU2NmJhZDM2OWRjOTcxMTRkNzk3OWVkZDZmYzAwOWFiZAY6BkVG--45584d68b2b7467bd88d07f4ec503e00ba2cc19d" YEAR="2018" POGRAM="AAA" sh scripts/season/show.sh
+TOKEN="BAhJIiVjYTkyZjg0Nzk1ZTE4NzUzYzY1NzM2ZDU1ZjkwMzAxZAY6BkVG--5cce6730561d6b6709dcce35344010c1911911e2" ID="1" sh scripts/season/show.sh
 
 # Update a season
 TOKEN="BAhJIiUxZTRiNjg5NWJiYmI2ODA1YmI3YzVlZDU5MTJjYjAwYgY6BkVG--501964881806b10c92c61010b556e07f5ec0da60" ID=2 YEAR="2018" PROGRAM="Majors" sh scripts/season/update.sh
