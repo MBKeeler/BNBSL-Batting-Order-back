@@ -2,7 +2,7 @@
 
 class Player < ApplicationRecord
   belongs_to :user
-  has_many :player_seasons
+  has_many :player_seasons, dependent: :destroy
   has_many :seasons, through: :player_seasons
   validates :first_name, presence: true
   validates :last_name, presence: true
