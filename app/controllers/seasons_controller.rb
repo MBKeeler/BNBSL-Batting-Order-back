@@ -2,7 +2,7 @@
 
 class SeasonsController < ProtectedController
 # class SeasonsController < ApplicationController
-  before_action :set_season, only: [:update, :destroy]
+  before_action :set_season, only: [:show, :update, :destroy]
 
   # GET /players
   def index
@@ -11,16 +11,16 @@ class SeasonsController < ProtectedController
   end
 
   # GET /seasons/1
+  # def show
+  #   # @season = current_user.seasons.find_by(year: season_params[:year], program: season_params[:program])
+  #   @season = current_user.players.find_by(params[:id])
+  #   render json: @season
+  # end
+
+  # GET /evaluations/1
   def show
-    # @season = current_user.seasons.find_by(year: season_params[:year], program: season_params[:program])
-    @season = current_user.players.find_by(params[:id])
     render json: @season
   end
-
-  # def show_players
-  #   @seasons.player = Player.find(@seasons)
-  #   render json: Season.find_by(year: params[:season][:year], program: params[:season][:program])
-  # end
 
   # POST /players
   def create
@@ -32,11 +32,12 @@ class SeasonsController < ProtectedController
       render json: @season.errors, status: :unprocessable_entity
     end
   end
-def findorcreate
-  @season = current_user.seasons.find_or_create_by(season_params)
 
-  render json: @season, status: :created, location: @season
-end
+  def findorcreate
+    @season = current_user.seasons.find_or_create_by(season_params)
+
+    render json: @season, status: :created, location: @season
+  end
 
   # PATCH/PUT /seasons/1
   def update

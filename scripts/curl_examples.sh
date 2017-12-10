@@ -37,7 +37,7 @@ TOKEN="BAhJIiUxZTRiNjg5NWJiYmI2ODA1YmI3YzVlZDU5MTJjYjAwYgY6BkVG--501964881806b10
 TOKEN="BAhJIiU2NmJhZDM2OWRjOTcxMTRkNzk3OWVkZDZmYzAwOWFiZAY6BkVG--45584d68b2b7467bd88d07f4ec503e00ba2cc19d" YEAR="2023" TEAM="Astros" PROGRAM="AAA" sh scripts/season/createorfind.sh
 
 # View one Season
-TOKEN="BAhJIiVjYTkyZjg0Nzk1ZTE4NzUzYzY1NzM2ZDU1ZjkwMzAxZAY6BkVG--5cce6730561d6b6709dcce35344010c1911911e2" ID="1" sh scripts/season/show.sh
+TOKEN="BAhJIiVjN2JhMTliOWIyMWNkNjRhODE0ZTY4ZDY0YWQ3ZjE5ZQY6BkVG--e29c3be428f98fcde4a3b85ea8f2e18bf9a97ba8" ID="3" sh scripts/season/show.sh
 
 # Update a season
 TOKEN="BAhJIiUxZTRiNjg5NWJiYmI2ODA1YmI3YzVlZDU5MTJjYjAwYgY6BkVG--501964881806b10c92c61010b556e07f5ec0da60" ID=2 YEAR="2018" PROGRAM="Majors" sh scripts/season/update.sh
@@ -52,7 +52,7 @@ TOKEN="BAhJIiViZjY0MmNlMTM0NmNiYWZhODI3NTA3MGI5Mjc4MzRjMQY6BkVG--f107269e4a891ed
 TOKEN="BAhJIiU1MGNiNGNlNmEyYjgwNTM3M2ViNDlkNGNmNjA4ZDZiYwY6BkVG--05bb8f53589409cabcc66ba96621cb76efae25a3" sh scripts/player_season/index.sh
 
 # Get a player_season
-TOKEN="BAhJIiVmMjBiZGRlOGJlYmVhNDQwMWYyZjgzOTVjOTY2NTFiMgY6BkVG--52604f8d040e882996fe564963c2e5452b8e0a1a" SEASONID=1 sh scripts/player_season/show.sh
+TOKEN="BAhJIiVjN2JhMTliOWIyMWNkNjRhODE0ZTY4ZDY0YWQ3ZjE5ZQY6BkVG--e29c3be428f98fcde4a3b85ea8f2e18bf9a97ba8" SEASONID=1 sh scripts/player_season/show.sh
 
 # Update a player_season with a player
 TOKEN="BAhJIiU1MGNiNGNlNmEyYjgwNTM3M2ViNDlkNGNmNjA4ZDZiYwY6BkVG--05bb8f53589409cabcc66ba96621cb76efae25a3" PLAYERID="7" sh scripts/player_season/update.sh
