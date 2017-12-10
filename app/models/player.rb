@@ -12,7 +12,7 @@ class Player < ApplicationRecord
   # batting_avg is not initially required, but we may want to
   # use it in the application to determine position 4 (clean up) in the
   # batting order
-  validates :batting_avg, length: { maximum: 3 }, numericality: { only_integer: true}
+  # validates :batting_avg, length: { maximum: 3 }, numericality: { only_integer: true}
   # validates :season, presence: true
   validates :batting_position, presence: true
 end
