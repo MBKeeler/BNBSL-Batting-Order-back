@@ -45,9 +45,6 @@ the following fields:
 +---------+---------------------
 string        "first_name"
 string        "last_name"
-string        "team"
-string        "program"
-string        "notes"
 string        "position"
 string        "batting_position"
 integer       "batting_avg"
@@ -125,23 +122,19 @@ Player Resource Actions:
  show          get          /players      finds a single player using name
 ```
 Player Resource Notes:
-Player resource requires user authentication for all actions. Sample parameters
-are provided in JSON format below for creating and modifying a player.
+There is a dependent destroy relationship between Players and Seasons.
+Player resource requires user authentication for all actions.
+Sample parameters are provided in JSON format below for creating and modifying
+a player.
 
 create
 ```
 "player": {
   "first_name": "'"${FIRST_NAME}"'",
   "last_name": "'"${LAST_NAME}"'",
-  "age": "'"${AGE}"'",
-  "grade": "'"${GRADE}"'",
-  "program": "'"${PROGRAM}"'",
-  "notes": "'"${NOTES}"'",
-  "catch": "'"${CATCH}"'",
-  "throw": "'"${THROW}"'",
-  "pitch": "'"${PITCH}"'",
-  "bat": "'"${BAT}"'",
-  "athleticism": "'"${ATHLETICISM}"'"
+  "position": "'"${POSITION}"'",
+  "batting_position": "'"${BATTINPOSION}"'",
+  "batting_avg": "'"${BATTINAVG}"'",
 }
 ```
 update (or modify)
@@ -149,35 +142,12 @@ update (or modify)
 "player": {
   "first_name": "'"${FIRST_NAME}"'",
   "last_name": "'"${LAST_NAME}"'",
-  "age": "'"${AGE}"'",
-  "grade": "'"${GRADE}"'",
-  "program": "'"${PROGRAM}"'",
-  "notes": "'"${NOTES}"'",
-  "catch": "'"${CATCH}"'",
-  "throw": "'"${THROW}"'",
-  "pitch": "'"${PITCH}"'",
-  "bat": "'"${BAT}"'",
-  "athleticism": "'"${ATHLETICISM}"'"
+  "position": "'"${POSITION}"'",
+  "batting_position": "'"${BATTINPOSION}"'",
+  "batting_avg": "'"${BATTINAVG}"'",
 }
 ```
 Season Resource Actions
-
-create
-```
-"season": {
-  "year": "'"${YEAR}"'",
-  "team": "'"${TEAM}"'",
-  "program": "'"${PROGRAM}"'"
-}
-```
-update (or modify)
-```
-"season": {
-  "year": "'"${YEAR}"'",
-  "team": "'"${TEAM}"'",
-  "program": "'"${PROGRAM}"'"
-}
-```
 
 ```
 -- Action -+-HTTP Verb-+ ---- URL -----+---- Description ----
@@ -191,6 +161,45 @@ Season Resource Notes:
 Season resource requires user authentication for all actions. Sample parameters
 are provided in JSON format below for creating and modifying a season.
 
+create
+```
+"season": {
+  "year": "'"${YEAR}"'",
+  "team": "'"${TEAM}"'",
+  "program": "'"${PROGRAM}"'"
+}
+```
+update (or modify)
+```
+"season": {
+  "year": "'"${YEAR}"'",
+  "team": "'"${TEAM}"'",
+  "program": "'"${PROGRAM}"'"
+}
+```
+
+PlayerSeason Join Table Notes
+Player and Seasons are joined via the PlayerSeason table. When accessing a table
+you will also have access to associated player and season data.
+
+PlayerSeason resource requires user authentication for all actions. Sample parameters
+are provided in JSON format below for creating and retrieving a PlayerSeason
+object.
+
+Create
+```
+"player_season": {
+  "season_id": "'"${SEASONID}"'",
+  "player_id": "'"${PLAYERID}"'"
+}
+```
+
+```
+-- Action -+-HTTP Verb-+ ---- URL -----+---- Description ----
+create        POST         /player_seasons      creates a playerseason table
+index         GET          /player_seasons      retrieves a list of all
+show          get          /player_seasons:id   finds a single playerseason
+```
 
 ## Example Curl Scripts
 Curl scripts are contained within each file listed below.  These may be
@@ -221,10 +230,12 @@ Player resource scripts:
   update.sh
   show.sh
 
-Join table
+PlayerSeason Join table
 ./scripts/player_season
 
   create.sh
+  index.sh
+  show.sh
 
 ## Example CL command syntax to run Curl Scripts
 
